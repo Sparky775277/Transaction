@@ -1,9 +1,12 @@
 package main.transaction.model;
 
+import org.springframework.data.annotation.Id;
+
 import java.math.BigDecimal;
 
 public class Account {
 
+    @Id
     private long id;
 
     private String name;
@@ -11,10 +14,11 @@ public class Account {
     private BigDecimal amount;
 
 
-    public long getId(){
+    public long getId() {
         return id;
     }
-    public void setId(long id){
+
+    public void setId(long id) {
         this.id = id;
     }
 
