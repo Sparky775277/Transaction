@@ -3,7 +3,10 @@ package main.transaction.controller;
 import main.transaction.dto.TransferRequest;
 import main.transaction.model.Account;
 import main.transaction.service.AccountService;
+import main.transaction.service.ConversionService;
 import main.transaction.service.MoneyService;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -15,9 +18,12 @@ public class AccountController {
 
     private final MoneyService moneyService;
 
-    public AccountController(AccountService accountService, MoneyService moneyService) {
+    private final ConversionService conversionService;
+
+    public AccountController(AccountService accountService, MoneyService moneyService, ConversionService conversionService) {
         this.accountService = accountService;
         this.moneyService = moneyService;
+        this.conversionService = conversionService;
     }
 
     @PostMapping("/transfer")
@@ -41,6 +47,8 @@ public class AccountController {
             return accountService.findAccountByName(name);
         }
     }
+
+
 
     @PostMapping("/set")
     public void setAccount(
@@ -68,6 +76,15 @@ public class AccountController {
             @RequestBody Account account
     ){
         moneyService.subtractMoney(account.getId(), account.getAmount());
+    }
+
+    @GetMapping("/convert")
+    public ResponseEntity<Account> convert(@RequestParam long id,
+                                           @RequestParam String valute
+    ){
+        return ResponseEntity
+                .status(HttpStatus.OK)
+                .body(conversionService.convertMoney(id,valute));
     }
 
 }
