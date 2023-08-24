@@ -14,12 +14,12 @@ public class SaxParserHandler extends DefaultHandler {
 
     private final String TAG_VALUE = "Value";
 
-
     private final String valuteNameHandler;
 
     private String currentTagName;
 
     private String currentCharCode;
+
     boolean isValute = false;
 
     public SaxParserHandler(String valuteName) {
@@ -28,10 +28,10 @@ public class SaxParserHandler extends DefaultHandler {
 
     Valute valute = new Valute();
 
-
     public Valute getValute() {
         return valute;
     }
+
 
     @Override
     public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {

@@ -2,6 +2,7 @@ package main.transaction.service;
 
 import main.transaction.model.Account;
 import main.transaction.repository.AccountRepository;
+import main.transaction.repository.LogRepository;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
@@ -12,22 +13,28 @@ public class AccountService {
 
     private final AccountRepository accountRepository;
 
-    public AccountService(AccountRepository accountRepository){
+    private final LogRepository logRepository;
+
+
+    public AccountService(AccountRepository accountRepository, LogRepository logRepository) {
         this.accountRepository = accountRepository;
+        this.logRepository = logRepository;
     }
 
-
-    public void setAccount(String name){
+    public void setAccount(String name) {
         setAccount(name, new BigDecimal(0));
     }
-    public void setAccount(String name, BigDecimal amount){
+
+    public void setAccount(String name, BigDecimal amount) {
         Account account = new Account();
         account.setName(name);
         account.setAmount(amount);
         accountRepository.save(account);
+        logRepository.insertLogInfo(account.getId(), "setAccount", amount, "New account created: name:" + name + " id:" + account.getId());
     }
 
-    public void deleteAccount(String name){
+    public void deleteAccount(String name) {
+        logRepository.insertLogInfo(accountRepository.findAccountByName(name), "deleteAccount", null, "Delete account: name:" + name + " id:" + accountRepository.findAccountByName(name));
         accountRepository.deleteAccountByName(name);
     }
 
@@ -38,8 +45,5 @@ public class AccountService {
     public List<Account> findAccountByName(String name) {
         return accountRepository.findAccountsByName(name);
     }
-
-
-
 
 }

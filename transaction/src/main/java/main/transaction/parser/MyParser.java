@@ -10,7 +10,6 @@ import java.io.IOException;
 
 public class MyParser {
 
-
     public static Valute parse(String valuteName, InputSource http) {
 
         SAXParserFactory factory = SAXParserFactory.newInstance();
@@ -28,10 +27,6 @@ public class MyParser {
         } catch (SAXException | IOException e) {
             throw new RuntimeException(e);
         }
-
         return handler.getValute();
-
     }
-
-
 }

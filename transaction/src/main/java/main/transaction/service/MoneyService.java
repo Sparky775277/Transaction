@@ -3,6 +3,7 @@ package main.transaction.service;
 import main.transaction.exception.AccountNotFoundException;
 import main.transaction.model.Account;
 import main.transaction.repository.AccountRepository;
+import main.transaction.repository.LogRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -12,17 +13,22 @@ import java.math.BigDecimal;
 @Transactional
 public class MoneyService {
 
+    private final LogRepository logRepository;
+
     private final AccountRepository accountRepository;
 
-    public MoneyService(AccountRepository accountRepository) {
+    public MoneyService(AccountRepository accountRepository, LogRepository logRepository) {
         this.accountRepository = accountRepository;
+        this.logRepository = logRepository;
     }
+
 
     public void addMoney(long id, BigDecimal amount) {
         if (accountRepository.checkAccount(id) && amount.compareTo(BigDecimal.valueOf(0)) >= 0) {
             Account account = accountRepository.findById(id).orElseThrow(() -> new AccountNotFoundException());
             BigDecimal newAccountAmount = account.getAmount().add(amount);
             accountRepository.changeAmount(id, newAccountAmount);
+            logRepository.insertLogInfo(id, "addMoney", amount, "Added money (" + amount + ") to " + account.getName() + " with id: " + id);
         } else {
             throw new AccountNotFoundException();
         }
@@ -36,6 +42,7 @@ public class MoneyService {
                 throw new RuntimeException();
             }
             accountRepository.changeAmount(id, newAccountAmount);
+            logRepository.insertLogInfo(id, "subtractMoney", amount, "Subtracted money (" + amount + ") from " + account.getName() + " with id: " + id);
         } else {
             throw new AccountNotFoundException();
         }
@@ -54,7 +61,7 @@ public class MoneyService {
 
         BigDecimal receiverNewAmount = receiver.getAmount().add(amount);
 
-        if (amount.compareTo(BigDecimal.valueOf(0)) < 0 || senderNewAmount.compareTo(BigDecimal.valueOf(0)) < 0){
+        if (amount.compareTo(BigDecimal.valueOf(0)) < 0 || senderNewAmount.compareTo(BigDecimal.valueOf(0)) < 0) {
             throw new RuntimeException();
         }
 
@@ -62,8 +69,10 @@ public class MoneyService {
 
         accountRepository.changeAmount(idReceiver, receiverNewAmount);
 
+        logRepository.insertLogInfo(idSender, "transferMoney", amount, sender.getName() + " with id: " + idSender + " transferred money (" + amount + ") to " + receiver.getName() + " with id: " + idReceiver);
+
+        logRepository.insertLogInfo(idReceiver, "transferMoney", amount, receiver.getName() + " with id: " + idReceiver + " got money (" + amount + ")  from " + sender.getName() + " with id: " + idSender);
+
     }
-
-
 
 }

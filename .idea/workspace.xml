@@ -1,19 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="09e6c182-93eb-4e29-80cd-cf471c504190" name="Changes" comment="" />
+    <list default="true" id="09e6c182-93eb-4e29-80cd-cf471c504190" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/transaction/src/main/java/main/transaction/model/Log.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transaction/src/main/java/main/transaction/repository/LogRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transaction/src/main/java/main/transaction/service/LogService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/transaction/src/main/java/main/transaction/controller/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/transaction/src/main/java/main/transaction/controller/AccountController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/transaction/src/main/java/main/transaction/exception/AccountNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/transaction/src/main/java/main/transaction/exception/AccountNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/transaction/src/main/java/main/transaction/parser/MyParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/transaction/src/main/java/main/transaction/parser/MyParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/transaction/src/main/java/main/transaction/parser/SaxParserHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/transaction/src/main/java/main/transaction/parser/SaxParserHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/transaction/src/main/java/main/transaction/repository/AccountRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/transaction/src/main/java/main/transaction/repository/AccountRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/transaction/src/main/java/main/transaction/service/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/transaction/src/main/java/main/transaction/service/AccountService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/transaction/src/main/java/main/transaction/service/ConversionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/transaction/src/main/java/main/transaction/service/ConversionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/transaction/src/main/java/main/transaction/service/MoneyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/transaction/src/main/java/main/transaction/service/MoneyService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/transaction/src/main/resources/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/transaction/src/main/resources/schema.sql" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2UIXXJzyAqI4UQDiHYD0G55LdTy" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -21,13 +51,32 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/khudo/idea/GIT/Transaction/transaction",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/khudo/idea/GIT/Transaction",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "spring.configuration.checksum": "f4d5b76a2418eba4baeabc1ed9142b54",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="TransactionApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="transaction" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="main.transaction.TransactionApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -37,7 +86,12 @@
       <option name="presentableId" value="Default" />
       <updated>1692628109074</updated>
       <workItem from="1692628110747" duration="11000" />
+      <workItem from="1692821479572" duration="798000" />
+      <workItem from="1692878405145" duration="23116000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
 </project>

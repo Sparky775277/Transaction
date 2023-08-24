@@ -15,6 +15,9 @@ public interface AccountRepository extends CrudRepository<Account, Long> {
     @Query("SELECT * FROM account WHERE name = :name")
     List<Account> findAccountsByName(String name);
 
+    @Query("SELECT MAX(id) FROM account WHERE name = :name")
+    Long findAccountByName(String name);
+
     @Modifying
     @Query("DELETE FROM account WHERE name = :name")
     void deleteAccountByName(String name);
@@ -25,6 +28,5 @@ public interface AccountRepository extends CrudRepository<Account, Long> {
 
     @Query("SELECT EXISTS(SELECT * FROM account where id = :id)")
     Boolean checkAccount(long id);
-
 
 }
