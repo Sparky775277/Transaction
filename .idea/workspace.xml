@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09e6c182-93eb-4e29-80cd-cf471c504190" name="Changes" comment="Added: paging/sorting/history">
+    <list default="true" id="09e6c182-93eb-4e29-80cd-cf471c504190" name="Changes" comment="Added: getAccountById">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/transaction/src/main/java/main/transaction/controller/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/transaction/src/main/java/main/transaction/controller/AccountController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/transaction/src/main/java/main/transaction/repository/AccountRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/transaction/src/main/java/main/transaction/repository/AccountRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/transaction/src/main/java/main/transaction/service/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/transaction/src/main/java/main/transaction/service/AccountService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,25 +36,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/khudo/idea/GIT/Transaction&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;f4d5b76a2418eba4baeabc1ed9142b54&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/khudo/idea/GIT/Transaction",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "Settings.Markdown",
+    "spring.configuration.checksum": "f4d5b76a2418eba4baeabc1ed9142b54",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="TransactionApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="transaction" />
@@ -77,7 +76,7 @@
       <workItem from="1692628110747" duration="11000" />
       <workItem from="1692821479572" duration="798000" />
       <workItem from="1692878405145" duration="24647000" />
-      <workItem from="1692968175601" duration="1607000" />
+      <workItem from="1692968175601" duration="4838000" />
     </task>
     <task id="LOCAL-00001" summary="Added: paging/sorting/history">
       <option name="closed" value="true" />
@@ -87,7 +86,15 @@
       <option name="project" value="LOCAL" />
       <updated>1692916079948</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added: getAccountById">
+      <option name="closed" value="true" />
+      <created>1692969860703</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1692969860703</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -95,6 +102,11 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added: paging/sorting/history" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added: paging/sorting/history" />
+    <MESSAGE value="Added: getAccountById" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added: getAccountById" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
