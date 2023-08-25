@@ -53,6 +53,17 @@ public class AccountController {
         }
     }
 
+    @GetMapping("/account")
+    public Iterable<Account> getAccount(
+            @RequestParam(required = false) Long id
+    ) {
+        if (id == null) {
+            return accountService.getAllAccounts();
+        } else {
+            return accountService.findAccountById(id);
+        }
+    }
+
 
     @PostMapping("/set")
     public void setAccount(

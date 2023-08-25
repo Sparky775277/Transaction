@@ -6,7 +6,9 @@ import main.transaction.repository.LogRepository;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
+import java.math.BigInteger;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class AccountService {
@@ -22,7 +24,7 @@ public class AccountService {
     }
 
     public void setAccount(String name) {
-        setAccount(name, new BigDecimal(0));
+        setAccount(name, BigDecimal.ZERO);
     }
 
     public void setAccount(String name, BigDecimal amount) {
@@ -41,6 +43,12 @@ public class AccountService {
     public Iterable<Account> getAllAccounts() {
         return accountRepository.findAll();
     }
+
+    public List<Account> findAccountById(long id){
+        return accountRepository.findAccountsById(id);
+    }
+
+
 
     public List<Account> findAccountByName(String name) {
         return accountRepository.findAccountsByName(name);

@@ -29,4 +29,7 @@ public interface AccountRepository extends CrudRepository<Account, Long> {
     @Query("SELECT EXISTS(SELECT * FROM account where id = :id)")
     Boolean checkAccount(long id);
 
+    @Query("SELECT * FROM account where id = :id")
+    List<Account> findAccountsById(long id);
+
 }
